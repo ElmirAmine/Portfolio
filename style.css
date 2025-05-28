@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@600&family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&display=swap');
+
 
 * {
   margin: 0;
@@ -8,9 +9,9 @@
 
 html, body {
   scroll-behavior: smooth;
-  font-family: 'Roboto', sans-serif;
-  background-color: #0b0b0b;
-  color: #f4f4f4;
+  font-family: 'Open Sans', sans-serif;
+  background-color: #f2efe2;
+  color: #1a1a1a;
 }
 
 /* HEADER */
@@ -18,21 +19,20 @@ header {
   position: fixed;
   top: 0;
   width: 100%;
-  background: rgba(20, 20, 20, 0.95);
+  background: #003049;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
   z-index: 999;
-  border-bottom: 2px solid #9c1c1c;
+  border-bottom: 4px solid #0a0a09;
 }
 
 .logo {
-  font-size: 1.5rem;
-  font-weight: bold;
-  font-family: 'Cinzel', serif;
-  color: #9c1c1c;
-  letter-spacing: 1px;
+  font-size: 1.8rem;
+  font-family: 'Pirata One', cursive;
+  color: #fcbf49;
+  letter-spacing: 2px;
 }
 
 nav ul {
@@ -43,16 +43,16 @@ nav ul {
 
 nav ul li a {
   text-decoration: none;
-  color: #f4f4f4;
+  color: #fff;
   font-weight: bold;
   transition: color 0.3s;
 }
 
 nav ul li a:hover {
-  color: #9c1c1c;
+  color: #fcbf49;
 }
 
-/* SECTIONS GÉNÉRALES */
+/* SECTIONS */
 section {
   height: 100vh;
   padding: 6rem 2rem 2rem;
@@ -63,39 +63,60 @@ section {
   background-position: center;
 }
 
+/* HERO */
 #hero {
-  background: linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.85)),
-              url('https://wallpapercave.com/wp/wp7706701.jpg');
-  text-align: center;
+    background-image: url('images/paysage.webp');
+    background-size: cover;
+    background-position: center;
+    background-size: 70%;
+    background-repeat: no-repeat;
+     background-attachment: fixed;
+    min-height: 100vh;
+    padding:10px 20px;
+    color: white;
+    text-align: center;
+    background-size: 100% auto;
+
+  }
+.hero-title-img {
+  width: 100%;
+  max-width: 250px;
+  height: auto;
+  margin:0px auto 0 auto; /* 👈 image descend de 100px */
+  display: block;
+  filter: drop-shadow(2px 2px 8px #00000088);
 }
 
-#hero h1 {
-  font-family: 'Cinzel', serif;
-  font-size: 2.5rem;
-  color: #d32f2f;
+
+
+#hero p {
+  font-size: 1.2rem;
 }
 
+/* PROJECTS */
 #projects {
-  background: linear-gradient(rgba(20,20,20,0.95), rgba(20,20,20,0.95)),
-              url('https://images6.alphacoders.com/105/thumb-1920-1058281.jpg');
+  background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
+              url('https://images.alphacoders.com/106/thumb-1920-1069395.jpg');
+  color: #fff;
 }
 
 #projects h2, #contact h2 {
-  font-family: 'Cinzel', serif;
+  font-family: 'Pirata One', cursive;
   font-size: 2rem;
   margin-bottom: 1rem;
-  color: #9c1c1c;
+  color: #fcbf49;
 }
 
 #projects ul {
-  list-style-type: square;
+  list-style-type: circle;
   padding-left: 2rem;
-  color: #ddd;
 }
 
+/* CONTACT */
 #contact {
-  background: linear-gradient(rgba(10,10,10,0.95), rgba(10,10,10,0.95)),
-              url('https://images8.alphacoders.com/123/thumb-1920-1234964.jpg');
+  background: linear-gradient(rgba(255,255,255,0.8), rgba(255,255,255,0.8)),
+              url('https://images6.alphacoders.com/129/thumb-1920-1297350.jpg');
+  color: #003049;
 }
 
 #contact p {
@@ -106,7 +127,235 @@ section {
 footer {
   text-align: center;
   padding: 1rem;
-  background-color: #000;
-  color: #888;
-  border-top: 1px solid #9c1c1c;
+  background-color: #003049;
+  color: #fcbf49;
+  border-top: 4px solid #d62828;
+}
+
+#hero h1 {
+  font-size: 5rem;
+  color: #d62828;
+  font-family: 'Pirata One', cursive;
+  margin-bottom: 0.5rem;
+  letter-spacing: 3px;
+  text-shadow: 2px 2px #00000088;
+}
+
+#hero h2 {
+  font-size: 2rem;
+  color: #fcbf49;
+  margin-bottom: 1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-shadow: 1px 1px #00000055;
+}
+
+#hero p {
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.project-image {
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+
+.project-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.project-image {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+.airlock-link {
+  transition: transform 0.3s ease;
+}
+
+.airlock-link:hover {
+  transform: scale(1.1);
+}
+
+.airlock-logo {
+  width: 120px;
+  height: auto;
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+}
+
+/* === ONE PIECE STYLE ADDITIONS === */
+
+/* Texture parchemin sur la section about */
+#about {
+  background: url('https://www.transparenttextures.com/patterns/old-map.png') repeat;
+  color: #222;
+  font-weight: 500;
+  background-color: #fdf6e3;
+  border-top: 4px solid #d62828;
+  border-bottom: 4px solid #fcbf49;
+  box-shadow: inset 0 0 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Animation vague douce sur le hero */
+@keyframes waveBackground {
+  0% { background-position: 0 0; }
+  100% { background-position: 1000px 0; }
+}
+
+
+/* Badge pirate */
+.badge-pirate {
+  display: inline-block;
+  background: #d62828;
+  color: #fff;
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  margin-top: 1rem;
+  box-shadow: 2px 2px 8px rgba(0,0,0,0.4);
+  font-family: 'Pirata One', cursive;
+}
+
+/* Animation hover effet "trésor" */
+nav ul li a:hover,
+.airlock-link:hover {
+  color: gold;
+  text-shadow: 0 0 5px #ffd700, 0 0 10px #ffa500;
+  transform: scale(1.05);
+}
+
+/* Animation douce d'apparition */
+@keyframes fadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+section {
+  animation: fadeUp 1s ease-in-out both;
+}
+
+.onepiece-form {
+  max-width: 600px;
+  margin: 0 auto;
+  background: url('https://www.transparenttextures.com/patterns/pirate-treasure.png') repeat;
+  padding: 2rem;
+  border: 4px solid #d62828;
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
+  font-family: 'Pirata One', cursive;
+  color: #fcbf49;
+  background-color: #003049ee;
+  backdrop-filter: blur(2px);
+}
+
+.onepiece-form h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: gold;
+  text-shadow: 1px 1px #000;
+}
+
+.onepiece-form label {
+  display: block;
+  margin-top: 1rem;
+  font-size: 1.2rem;
+}
+
+.onepiece-form input,
+.onepiece-form textarea {
+  width: 100%;
+  padding: 0.8rem;
+  margin-top: 0.5rem;
+  border: none;
+  border-radius: 8px;
+  background-color: #fdf6e3;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1rem;
+  color: #003049;
+  box-shadow: inset 0 0 5px #00000066;
+}
+
+.onepiece-form button {
+  margin-top: 1.5rem;
+  padding: 0.8rem 2rem;
+  background-color: #d62828;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  font-size: 1.1rem;
+  font-family: 'Pirata One', cursive;
+  cursor: pointer;
+  transition: transform 0.3s, background-color 0.3s;
+  box-shadow: 2px 2px 6px #000;
+}
+
+.onepiece-form button:hover {
+  background-color: gold;
+  color: #003049;
+  transform: scale(1.1);
+  text-shadow: 0 0 10px #ffd700, 0 0 20px #ff8c00;
+}
+
+.wanted-poster {
+  max-width: 250px;
+  margin-top: 20px;
+  border: 2px solid #000;
+  border-radius: 10px;
+  display: inline-block;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.wanted-poster:hover {
+  transform: scale(1.05);
+  box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+.prime-container {
+  text-align: center;
+  margin-top: -100px; /* ajout du point-virgule */
+  overflow: hidden; /* pour éviter que l’image pousse le layout au hover */
+}
+
+
+.shake {
+  animation: shake 0.6s;
+}
+
+.logo-img {
+  max-height: 80px; /* ajuste la hauteur ici */
+  width: auto;
+  transition: transform 0.3s ease;
+}
+
+.logo-img:hover {
+  transform: scale(1.1); /* effet zoom au survol */
+}
+
+.logo {
+  display: flex;
+  align-items: center;
 }

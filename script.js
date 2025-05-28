@@ -7,22 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
     themeToggle.textContent = body.classList.contains("dark") ? "☀️" : "🌙";
   });
 
-  const projects = [
-    {
-      title: "Cafetière connectée (Arduino)",
-      description: "Programmation via RTC, I2C, horloge, écran LCD.",
-    },
-    {
-      title: "API Node.js sécurisée",
-      description: "Connexion sécurisée avec token, base MongoDB, Docker.",
-    },
-    {
-      title: "Site vitrine React",
-      description: "Frontend moderne responsive avec React, GitHub Pages.",
-    },
-  ];
 
-  const projectList = document.querySelector(".project-list");
 
   projects.forEach((proj) => {
     const div = document.createElement("div");
