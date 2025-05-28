@@ -100,12 +100,19 @@ section {
   color: #fff;
 }
 
-#projects h2, #contact h2 {
+#projects h2,
+#contact h2 {
   font-family: 'Pirata One', cursive;
-  font-size: 2rem;
+  font-size: 2.5rem;
   margin-bottom: 1rem;
   color: #fcbf49;
+  letter-spacing: 2px;
+  text-shadow: 2px 2px 5px #000000aa;
+  border-bottom: 2px dashed #1d1b1b;
+  padding-bottom: 0.5rem;
+  text-transform: uppercase;
 }
+
 
 #projects ul {
   list-style-type: circle;
@@ -129,7 +136,7 @@ footer {
   padding: 1rem;
   background-color: #003049;
   color: #fcbf49;
-  border-top: 4px solid #d62828;
+  border-top: 4px solid #161515;
 }
 
 #hero h1 {
@@ -259,7 +266,7 @@ section {
   margin: 0 auto;
   background: url('https://www.transparenttextures.com/patterns/pirate-treasure.png') repeat;
   padding: 2rem;
-  border: 4px solid #d62828;
+  border: 4px solid #070606;
   border-radius: 15px;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
   font-family: 'Pirata One', cursive;
@@ -358,4 +365,29 @@ section {
 .logo {
   display: flex;
   align-items: center;
+}
+
+#contact {
+  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+              url('images/bateau.jpg'); /* Remplace par ton image */
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+#theme-toggle,
+#volume-toggle {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #fcbf49;
+  margin-left: 1rem;
+  transition: transform 0.3s;
+}
+
+#theme-toggle:hover,
+#volume-toggle:hover {
+  transform: scale(1.2);
 }
