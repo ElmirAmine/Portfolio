@@ -93,6 +93,8 @@ section {
   font-size: 1.2rem;
 }
 
+
+
 /* PROJECTS */
 #projects {
   background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
@@ -390,4 +392,31 @@ section {
 #theme-toggle:hover,
 #volume-toggle:hover {
   transform: scale(1.2);
+}
+
+
+#hero {
+  position: relative;
+}
+
+/* Lien contenant le logo GitHub */
+.hero-logo-link {
+  position: absolute;
+  top: 50%;    /* Ajuste la position verticale sur ta carte */
+  right: 20%;   /* Ajuste la position horizontale */
+  transform: translate(50%, -50%);
+  z-index: 10;
+}
+
+/* Image GitHub minuscule comme un point */
+.hero-logo {
+  width: 60 px;
+  height: 60px;
+}
+
+
+/* Optionnel : effet zoom au survol */
+.hero-logo:hover {
+  transform: scale(2);     /* Zoom x2 au survol */
+  cursor: pointer;
 }
