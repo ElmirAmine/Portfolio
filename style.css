@@ -82,7 +82,7 @@ section {
   width: 100%;
   max-width: 250px;
   height: auto;
-  margin:15px auto 0 auto; /* 👈 image descend de 100px */
+  margin:50px auto 0 auto; /* 👈 image descend de 100px */
   display: block;
   filter: drop-shadow(2px 2px 8px #00000088);
 }
@@ -326,22 +326,7 @@ section {
   text-shadow: 0 0 10px #ffd700, 0 0 20px #ff8c00;
 }
 
-.wanted-poster {
-  max-width: 250px;
-  margin-top: 20px;
-  border: 2px solid #000;
-  border-radius: 10px;
-  display: inline-block;
-  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
-  width: 100%;
-  height: auto;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
 
-.wanted-poster:hover {
-  transform: scale(1.05);
-  box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.5);
-}
 
 .prime-container {
   text-align: center;
@@ -444,25 +429,27 @@ section {
   cursor: pointer;
 }
 
-.hero-affiche-logo {
-  max-width: 250px;
-  margin-top: 20px;
-  border: 2px solid #000;
-  border-radius: 10px;
-  display: inline-block;
-  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
-  width: 100%;
-  height: auto;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.hero-affiche-logo:hover {
-  transform: scale(1.05);
-  box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.5);
-}
 
 .prime-container {
-  text-align: center;
-  margin-top: -100px; /* ajout du point-virgule */
-  overflow: hidden; /* pour éviter que l’image pousse le layout au hover */
+  position: relative;
+  width: 250px;  /* même largeur que tes images */
+  height: auto;  /* ou fixe si tu préfères */
+  margin: 0 auto;
 }
+
+.wanted-poster,
+.hero-affiche-logo {
+  display: inline-block;
+  max-width: 220px;
+  margin-top: 0px;
+  margin-left: 20px;  
+  border: 2px solid #000;
+  border-radius: 10px;
+  box-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+  height: auto;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  vertical-align: middle;
+}
+
+
+
