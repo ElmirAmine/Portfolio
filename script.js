@@ -1,43 +1,40 @@
-document.addEventListener("DOMContentLoaded", () => { 
+document.addEventListener("DOMContentLoaded", () => {
+  // 🌙/☀️ Thème et 🔊/🔇 Volume
   const themeToggle = document.getElementById("theme-toggle");
   const volumeToggle = document.getElementById("volume-toggle");
   const body = document.body;
-  const bgMusic = document.getElementById("bgMusic"); // <audio id="bgMusic">
-  const projectList = document.getElementById("project-list"); // Adapter ou supprimer si inutilisé
-  const projects = []; // À remplir si besoin
+  const bgMusic = document.getElementById("bgMusic");
+  const projectList = document.getElementById("project-list");
+  const projects = [];
 
-  // 🌙 Thème clair/sombre
+  // 🎨 Toggle thème clair/sombre
   themeToggle?.addEventListener("click", () => {
     body.classList.toggle("dark");
     themeToggle.textContent = body.classList.contains("dark") ? "☀️" : "🌙";
   });
 
-  // Initialisation musique
+  // 🔊 Musique
   if (bgMusic) {
     bgMusic.volume = 0.2;
     bgMusic.loop = true;
   }
 
-  // 🔊 Bouton volume qui mute/démute et lance la musique au premier clic
   let isMuted = true;
   volumeToggle?.addEventListener("click", async () => {
     if (!bgMusic) return;
     isMuted = !isMuted;
     bgMusic.muted = isMuted;
-
-    // Lance la musique si elle est en pause et qu'on vient de démuter
     if (!isMuted && bgMusic.paused) {
       try {
         await bgMusic.play();
       } catch {
-        console.warn("Lecture automatique bloquée, besoin d'interaction utilisateur.");
+        console.warn("Lecture automatique bloquée.");
       }
     }
-
     volumeToggle.textContent = isMuted ? "🔇" : "🔊";
   });
 
-  // Ajout dynamique de projets (facultatif)
+  // 📦 Ajout dynamique des projets (optionnel)
   if (projectList && projects.length > 0) {
     projects.forEach(proj => {
       const div = document.createElement("div");
@@ -46,4 +43,22 @@ document.addEventListener("DOMContentLoaded", () => {
       projectList.appendChild(div);
     });
   }
+
+  // 🖼️ Toggle entre les deux images (prime et affiche)
+  const primeImage = document.getElementById("prime-image");
+  const afficheImage = document.getElementById("affiche-image");
+
+  if (!primeImage || !afficheImage) {
+    console.warn("Les images ne sont pas trouvées.");
+    return;
+  }
+
+  function toggleImages() {
+    const isPrimeVisible = primeImage.style.display !== "none";
+    primeImage.style.display = isPrimeVisible ? "none" : "block";
+    afficheImage.style.display = isPrimeVisible ? "block" : "none";
+  }
+
+  primeImage.addEventListener("click", toggleImages);
+  afficheImage.addEventListener("click", toggleImages);
 });

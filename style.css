@@ -82,7 +82,7 @@ section {
   width: 100%;
   max-width: 250px;
   height: auto;
-  margin:0px auto 0 auto; /* 👈 image descend de 100px */
+  margin:15px auto 0 auto; /* 👈 image descend de 100px */
   display: block;
   filter: drop-shadow(2px 2px 8px #00000088);
 }
@@ -410,8 +410,8 @@ section {
 
 /* Image GitHub minuscule comme un point */
 .hero-logo {
-  width: 60 px;
-  height: 60px;
+  width: 70 px;
+  height: 70px;
 }
 
 
@@ -419,4 +419,50 @@ section {
 .hero-logo:hover {
   transform: scale(2);     /* Zoom x2 au survol */
   cursor: pointer;
+}
+
+
+
+/* Conteneur du lien email */
+.hero-email-link {
+  position: absolute;
+  top: 80%;        /* Ajuste la position verticale */
+  right: 75%;      /* Ajuste la position horizontale */
+  transform: translate(50%, -50%);
+  z-index: 10;
+}
+
+.hero-email-logo {
+  max-width: 60px;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+/* Effet zoom au survol */
+.hero-email-logo:hover {
+  transform: scale(2); /* Zoom x2 */
+  cursor: pointer;
+}
+
+.hero-affiche-logo {
+  max-width: 250px;
+  margin-top: 20px;
+  border: 2px solid #000;
+  border-radius: 10px;
+  display: inline-block;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hero-affiche-logo:hover {
+  transform: scale(1.05);
+  box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+.prime-container {
+  text-align: center;
+  margin-top: -100px; /* ajout du point-virgule */
+  overflow: hidden; /* pour éviter que l’image pousse le layout au hover */
 }
