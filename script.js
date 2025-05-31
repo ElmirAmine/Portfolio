@@ -44,21 +44,63 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // 🖼️ Toggle entre les deux images (prime et affiche)
-  const primeImage = document.getElementById("prime-image");
-  const afficheImage = document.getElementById("affiche-image");
+const primeImage = document.getElementById("prime-image");
+const afficheImage = document.getElementById("affiche-image");
+const afficheText = document.getElementById("affiche-text");
 
-  if (!primeImage || !afficheImage) {
-    console.warn("Les images ne sont pas trouvées.");
-    return;
+if (!primeImage || !afficheImage || !afficheText) {
+  console.warn("Les éléments requis ne sont pas trouvés.");
+  // On arrête le script si les éléments manquent
+  throw new Error("Elements manquants");
+}
+
+let hasTyped = false;
+let typingInterval = null;
+
+function toggleImages() {
+  const isPrimeVisible = primeImage.style.display !== "none";
+
+  // Toggle display images
+  primeImage.style.display = isPrimeVisible ? "none" : "block";
+  afficheImage.style.display = isPrimeVisible ? "block" : "none";
+
+  // Toggle display text
+  afficheText.style.display = isPrimeVisible ? "block" : "none";
+
+  if (isPrimeVisible && !hasTyped) {
+    hasTyped = true;
+    typeWriterEffect(
+      "Je m'appelle Amine El mir , j'ai 20 ans d'origine marocain et j'ai comme objectif de devenir un grand développeur en informatique. ",
+      afficheText
+    );
   }
 
-  function toggleImages() {
-    const isPrimeVisible = primeImage.style.display !== "none";
-    primeImage.style.display = isPrimeVisible ? "none" : "block";
-    afficheImage.style.display = isPrimeVisible ? "block" : "none";
+  if (!isPrimeVisible) {
+    // Reset typing
+    clearInterval(typingInterval);
+    afficheText.innerText = "";
+    hasTyped = false;
   }
+}
 
-  primeImage.addEventListener("click", toggleImages);
-  afficheImage.addEventListener("click", toggleImages);
+function typeWriterEffect(text, element, speed = 50) {
+  if (!element) return;
+
+  let i = 0;
+  let displayedText = "";
+
+  const interval = setInterval(() => {
+    if (i < text.length) {
+      displayedText += text[i];  // ajoute le caractère normal
+      element.innerText = displayedText;  // met à jour tout le texte à chaque fois
+      i++;
+    } else {
+      clearInterval(interval);
+    }
+  }, speed);
+}
+
+
+primeImage.addEventListener("click", toggleImages);
+afficheImage.addEventListener("click", toggleImages);
 });
