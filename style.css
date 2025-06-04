@@ -7,12 +7,44 @@
   box-sizing: border-box;
 }
 
-html, body {
-  scroll-behavior: smooth;
-  font-family: 'Open Sans', sans-serif;
-  background-color: #f2efe2;
-  color: #1a1a1a;
+/* Le fond est mis sur le body */
+body {
+  margin: 0;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  font-family: sans-serif;
 }
+
+/* 📍 Conteneur de la carte */
+#carte {
+  background-image: url('images/paysage.webp');
+  background-repeat: no-repeat;
+  background-size: 100% auto;  /* conserve les proportions verticales */
+  background-position: top;
+  background-attachment: scroll;
+}
+
+#hero, #about {
+  min-height: 100vh;
+  padding: 0; /* ⬅️ Supprime l’espace interne */
+  background-color: rgba(0, 0, 0, 0.4);
+  text-align: center;
+  color: white;
+}
+/* Supprime les backgrounds individuels */
+#hero, #about {
+  background-image: none;
+}
+
+
+
+
+#hero, #about {
+  background: transparent;
+}
+
 
 /* HEADER */
 header {
@@ -63,28 +95,15 @@ section {
   background-position: center;
 }
 
-/* HERO */
-#hero {
-    background-image: url('images/paysage.webp');
-    background-size: cover;
-    background-position: center;
-    background-size: 70%;
-    background-repeat: no-repeat;
-     background-attachment: fixed;
-    min-height: 100vh;
-    padding:10px 20px;
-    color: white;
-    text-align: center;
-    background-size: 100% auto;
 
-  }
+
+  
 .hero-title-img {
   width: 100%;
-  max-width: 250px;
+  max-width: 300px;
   height: auto;
-  margin:50px auto 0 auto; /* 👈 image descend de 100px */
+  margin:115px auto 0 auto; /* 👈 image descend de 100px */
   display: block;
-  filter: drop-shadow(2px 2px 8px #00000088);
 }
 
 
@@ -209,15 +228,7 @@ footer {
 /* === ONE PIECE STYLE ADDITIONS === */
 
 /* Texture parchemin sur la section about */
-#about {
-  background: url('https://www.transparenttextures.com/patterns/old-map.png') repeat;
-  color: #222;
-  font-weight: 500;
-  background-color: #fdf6e3;
-  border-top: 4px solid #d62828;
-  border-bottom: 4px solid #fcbf49;
-  box-shadow: inset 0 0 30px rgba(0, 0, 0, 0.1);
-}
+
 
 /* Animation vague douce sur le hero */
 @keyframes waveBackground {
@@ -387,8 +398,8 @@ section {
 /* Lien contenant le logo GitHub */
 .hero-logo-link {
   position: absolute;
-  top: 50%;    /* Ajuste la position verticale sur ta carte */
-  right: 20%;   /* Ajuste la position horizontale */
+  top: 70%;    /* Ajuste la position verticale sur ta carte */
+  right: 30%;   /* Ajuste la position horizontale */
   transform: translate(50%, -50%);
   z-index: 10;
 }
@@ -396,7 +407,7 @@ section {
 /* Image GitHub minuscule comme un point */
 .hero-logo {
   width: 70 px;
-  height: 70px;
+  height: 80px;
 }
 
 
@@ -411,8 +422,8 @@ section {
 /* Conteneur du lien email */
 .hero-email-link {
   position: absolute;
-  top: 80%;        /* Ajuste la position verticale */
-  right: 75%;      /* Ajuste la position horizontale */
+  top: 75%;        /* Ajuste la position verticale */
+  right: 77%;      /* Ajuste la position horizontale */
   transform: translate(50%, -50%);
   z-index: 10;
 }
@@ -432,16 +443,16 @@ section {
 
 .prime-container {
   position: relative;
-  width: 250px;  /* même largeur que tes images */
+  width: 220px;  /* même largeur que tes images */
   height: auto;  /* ou fixe si tu préfères */
-  margin: 0 auto;
+  margin: 40px auto 0 auto;
 }
 
 .wanted-poster,
 .hero-affiche-logo {
   display: inline-block;
-  max-width: 220px;
-  margin-top: 0px;
+  max-width: 200px;
+  margin-top: 20px;
   margin-left: 20px;  
   border: 2px solid #000;
   border-radius: 10px;
@@ -454,13 +465,14 @@ section {
 .affiche-text-style {
   display: none;
   position: absolute;
-  top: 5%;
-  left: 20px;         /* même que margin-left des images */
-  width: 220px;       /* même que max-width des images */
+  top: 8%;
+  left: 20px;
+  max-width: 200px; /* même que l’image */
+  width: 100%;
   color: #111;
-  font-size: 0.55rem;
-  font-family: 'Press Start 2P', monospace;
-  text-align: left;   /* alignement à gauche */
+  font-size: 0.7rem;
+  font-family: 'Pirata One', cursive;
+  text-align: left;
   overflow-wrap: break-word;
   pointer-events: none;
   z-index: 2;

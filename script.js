@@ -70,8 +70,8 @@ function toggleImages() {
   if (isPrimeVisible && !hasTyped) {
     hasTyped = true;
     typeWriterEffect(
-      "Je m'appelle Amine El mir , j'ai 20 ans d'origine marocain et j'ai comme objectif de devenir un grand développeur en informatique. ",
-      afficheText
+      "Amine El Mir, le légendaire codeur des mers numériques. Sa prime augmente à chaque ligne de code déployée.” ",
+      afficheText 
     );
   }
 
