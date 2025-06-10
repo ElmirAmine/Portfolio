@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Portfolio d'Amine</title>
   <link rel="stylesheet" href="style.css"/>
-  <<link href="https://fonts.googleapis.com/css2?family=Pirata+One&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Pirata+One&display=swap" rel="stylesheet">
 
 </head>
 
@@ -21,7 +21,7 @@
     <nav>
       <ul>
         <li><a href="#hero">Accueil</a></li>
-        <li><a href="#about">Compétences</a></li>
+        <li><a href="#skills">Compétences</a></li>
         <li><a href="#projects">Projets</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
@@ -42,21 +42,28 @@
       </h1>
 
       <div class="prime-container">
-        <img 
-          id="prime-image"
-          src="images/prime.png"
-          alt="Avis de recherche El-Mir-Amine" 
-          class="wanted-poster"
-        />
-        <img 
-          id="affiche-image"
-          src="images/affiche.webp"
-          alt="Affiche"
-          class="hero-affiche-logo"
-          style="display: none;"
-        />
-        <div id="affiche-text" class="affiche-text-style"></div>
-      </div>
+  <img 
+    id="prime-image"
+    src="images/prime.png"
+    alt="Avis de recherche El-Mir-Amine" 
+    class="wanted-poster"
+  />
+  <img 
+    id="affiche-image"
+    src="images/affiche.webp"
+    alt="Affiche"
+    class="hero-affiche-logo"
+    style="display: none;"
+  />
+  <img 
+    id="bateau-image"
+    src="images/voiture.webp" 
+    alt="Image de bateau"
+    class="bateau-style"
+  />
+  <div id="affiche-text" class="affiche-text-style"></div>
+</div>
+
 
       <a href="https://github.com/ElmirAmine" class="hero-logo-link">
         <img src="images/github.webp" alt="GitHub" class="hero-logo" />
@@ -67,26 +74,76 @@
       </a>
     </section>
 
-    <!-- ABOUT SECTION -->
-    <section id="about">
-      <h2>Compétences</h2>
-      <p>HTML, CSS, JavaScript, React, Node.js, etc.</p>
-    </section>
+   <section id="skills" class="pirate-card">
+  <h2 class="card-title">Journal de compétences</h2>
+
+  <div class="skills-category">
+    <h3>Backend</h3>
+    <div class="skill">
+      <span>PHP</span>
+      <div class="skill-bar">
+        <div class="skill-level" style="width: 80%;"></div>
+      </div>
+    </div>
+    <div class="skill">
+      <span>Python</span>
+      <div class="skill-bar">
+        <div class="skill-level" style="width: 75%;"></div>
+      </div>
+    </div>
+    <div class="skill">
+      <span>SQL</span>
+      <div class="skill-bar">
+        <div class="skill-level" style="width: 85%;"></div>
+      </div>
+    </div>
+    <div class="skill">
+      <span>Node.js</span>
+      <div class="skill-bar">
+        <div class="skill-level" style="width: 70%;"></div>
+      </div>
+    </div>
   </div>
 
+  <div class="skills-category">
+    <h3>Frontend</h3>
+    <div class="skill">
+      <span>HTML</span>
+      <div class="skill-bar">
+        <div class="skill-level" style="width: 90%;"></div>
+      </div>
+    </div>
+    <div class="skill">
+      <span>CSS</span>
+      <div class="skill-bar">
+        <div class="skill-level" style="width: 85%;"></div>
+      </div>
+    </div>
+    <div class="skill">
+    <span>JavaScript</span>
+      <div class="skill-bar">
+        <div class="skill-level" style="width: 80%;"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
   <!-- PROJECTS SECTION -->
-  <section id="projects">
+ <section id="projects">
     <h2>Projets</h2>
     <div class="project-container">
-      <a href="https://airlockunlock.netlify.app/" target="_blank" class="airlock-link">
-        <img 
-          src="images/key.jpg"
-          alt="Projet Airlock" 
-          class="airlock-logo"
-        />
-      </a>
+        <div class="project-card">
+            <a href="https://airlockunlock.netlify.app/" target="_blank">
+                <img src="images/key.jpg" alt="Projet Airlock">
+            </a>
+            <div class="project-card-content">
+                <h3>Airlockunlock</h3>
+                <a href="https://airlockunlock.netlify.app/" target="_blank">Visiter le site</a>
+            </div>
+        </div>
+        <!-- Ajoutez d'autres projets ici -->
     </div>
-  </section>
+</section>
 
   <!-- CONTACT SECTION -->
   <section id="contact">
